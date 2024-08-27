@@ -1,18 +1,24 @@
 import React from "react";
 import styles from "./RestaurantCard.module.scss";
 
-function RestaurantCard() {
+function RestaurantCard(props) {
+  const { resData } = props;
+  const { cloudinaryImageId, costForTwo, name, avgRatingString, cuisines } =
+    resData?.info;
   return (
     <div className={styles.card}>
       <div className={styles.mainBanner}>
         <img
-          src="https://media-assets.swiggy.com/swiggy/image/upload/e0839ff574213e6f35b3899ebf1fc597"
+          src={
+            "https://media-assets.swiggy.com/swiggy/image/upload/" +
+            cloudinaryImageId
+          }
           alt=""
         />
-        <h3 className={styles.discountInfo}>ITEMS AT ₹169 </h3>
+        <h3 className={styles.discountInfo}>{costForTwo}</h3>
       </div>
       <div className={styles.info}>
-        <h2 className={styles.title}>Chinese Wok</h2>
+        <h2 className={styles.title}>{name}</h2>
         <p className={styles.avgRating}>
           <span className={styles.starIcon}>
             <svg
@@ -50,11 +56,10 @@ function RestaurantCard() {
               </defs>
             </svg>
           </span>
-          4.3
+          {avgRatingString}
         </p>
         <div className={styles.descriptions}>
-          <p>Chinese, Asian, Tibetan, Desserts</p>
-          <p>Santacruz East</p>
+          <p>{cuisines.join(", ").toString()}</p>
         </div>
       </div>
     </div>

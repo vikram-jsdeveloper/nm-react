@@ -18,12 +18,19 @@
   margin-bottom: 10px;
   img {
     width: 100%;
+    min-height: 300px;
+    max-height: 300px;
+    object-fit: cover;
   }
   .discountInfo {
+    color: #fff;
+    padding: 15px;
     position: absolute;
-    bottom: 0;
-    color: white;
-    padding: 0 15px;
+    bottom: 5px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    left: 0;
+    margin: 0;
   }
 }
 

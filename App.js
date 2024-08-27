@@ -17,10 +17,12 @@ const AppLayout = () => {
   );
 };
 
-<StrictMode>
-  <AppLayout />
-</StrictMode>;
+const appVar = (
+  <StrictMode>
+    <AppLayout />
+  </StrictMode>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<AppLayout />);
+root.render(appVar);
