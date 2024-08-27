@@ -1,0 +1,43 @@
+.card {
+  flex-grow: 0;
+  max-width: 100%;
+  flex-basis: 100%;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  @media screen and (min-width: 767px) {
+    max-width: calc(25%);
+    flex-basis: calc(25%);
+  }
+}
+
+.mainBanner {
+  position: relative;
+  margin-bottom: 10px;
+  img {
+    width: 100%;
+  }
+  .discountInfo {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 0 15px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0 0 10px;
+}
+
+.avgRating {
+  font-size: 13px;
+  line-height: 1.3;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

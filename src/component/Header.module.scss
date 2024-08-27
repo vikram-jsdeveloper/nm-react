@@ -1,7 +1,9 @@
 .headerBox {
+  border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 15px;
 }
 .logo {
   img {
@@ -14,5 +16,10 @@
     display: flex;
     list-style: none;
     gap: 20px;
+    font-size: 15px;
+    line-height: 1.3;
+    li {
+      cursor: pointer;
+    }
   }
 }
