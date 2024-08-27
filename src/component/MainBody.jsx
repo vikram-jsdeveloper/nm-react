@@ -627,7 +627,7 @@ function MainBody() {
       <div className={styles.searchBox}>Search</div>
       <div className={styles.restaurantsBox}>
         {restaurantList.map((data) => {
-          return <RestaurantCard resData={data} />;
+          return <RestaurantCard key={data.info.id} resData={data} />;
         })}
       </div>
     </div>

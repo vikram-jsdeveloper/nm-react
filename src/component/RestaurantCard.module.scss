@@ -7,10 +7,15 @@
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
-  @media screen and (min-width: 767px) {
-    max-width: calc(25%);
-    flex-basis: calc(25%);
+  background: #f1cd6a;
+  flex: 100%;
+  @media screen and (min-width: 768px) {
+    flex: 20%;
   }
+}
+
+.info {
+  padding: 10px;
 }
 
 .mainBanner {
@@ -21,12 +26,13 @@
     min-height: 300px;
     max-height: 300px;
     object-fit: cover;
+    vertical-align: bottom;
   }
   .discountInfo {
     color: #fff;
     padding: 15px;
     position: absolute;
-    bottom: 5px;
+    bottom: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     left: 0;
