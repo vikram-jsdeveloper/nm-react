@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Header.module.scss";
 
 function Header(props) {
+  const [mobClass, setMobClass] = useState(false);
   return (
     <header className={styles.headerBox}>
       <div className={styles.logo}>
         <img src={props.imageSrc} />
       </div>
-      <nav className={styles.navContainer}>
+      <nav
+        className={`${styles.navContainer} ${mobClass ? "active" : ""}`}
+        onClick={() => {
+          setMobClass(!mobClass);
+        }}
+      >
         <ul className={styles.navLinks}>
           <li>Home</li>
           <li>About us</li>

@@ -2,27 +2,24 @@ import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/component/Header";
 import styles from "./App.module.scss";
+import { LOGO_URL } from "./src/utils/constants";
 import MainBody from "./src/component/MainBody";
 
 const AppLayout = () => {
   return (
-    <div className={styles.container}>
-      <Header
-        imageSrc={
-          "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/meat-ball-food-sausage-barbecue-64.png"
-        }
-      />
-      <MainBody />
-    </div>
+    <>
+      <div className={styles.container}>
+        <Header imageSrc={LOGO_URL} />
+        <MainBody />
+      </div>
+    </>
   );
 };
 
-const appVar = (
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
   <StrictMode>
     <AppLayout />
   </StrictMode>
 );
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(appVar);

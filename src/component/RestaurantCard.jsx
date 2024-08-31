@@ -1,20 +1,15 @@
 import React from "react";
+import { CDN_URL } from "../utils/constants";
 import styles from "./RestaurantCard.module.scss";
 
 function RestaurantCard(props) {
   const { resData } = props;
-  const { cloudinaryImageId, costForTwo, name, avgRatingString, cuisines } =
+  const { cloudinaryImageId, costForTwo, name, avgRating, cuisines } =
     resData?.info;
   return (
     <div className={styles.card}>
       <div className={styles.mainBanner}>
-        <img
-          src={
-            "https://media-assets.swiggy.com/swiggy/image/upload/" +
-            cloudinaryImageId
-          }
-          alt=""
-        />
+        <img src={CDN_URL + cloudinaryImageId} alt="" />
         <h3 className={styles.discountInfo}>{costForTwo}</h3>
       </div>
       <div className={styles.info}>
@@ -56,7 +51,7 @@ function RestaurantCard(props) {
               </defs>
             </svg>
           </span>
-          {avgRatingString}
+          {avgRating}
         </p>
         <div className={styles.descriptions}>
           <p>{cuisines.join(", ").toString()}</p>

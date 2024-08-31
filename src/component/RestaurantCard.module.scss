@@ -11,6 +11,7 @@
   flex: 100%;
   @media screen and (min-width: 768px) {
     flex: 20%;
+    max-width: 25%;
   }
 }
 
@@ -21,6 +22,7 @@
 .mainBanner {
   position: relative;
   margin-bottom: 10px;
+  background: #f1cd6a;
   img {
     width: 100%;
     min-height: 300px;
